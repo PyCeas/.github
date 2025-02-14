@@ -28,4 +28,4 @@ If you are not sure which template to choose, refer to the descriptions below:
 ---
 
 ## 🔗 Related Links
-For more information, check the [Contributing Guidelines](https://github.com/PyCeas/Pyceas/blob/main/CONTRIBUTING.md) for details on submitting pull requests.
+For more information, check the [Contributing Guidelines](/CONTRIBUTING.md) for details on submitting pull requests.
