@@ -1,0 +1,111 @@
+name: Bug report
+description: Create a report to help us improve PyCeas.
+title: "Bug: "
+labels:
+  - bug
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the details below to help us reproduce and fix the bug.
+  
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: bug:desc
+      description: A clear and concise description of what the bug is.
+      value: |
+        ### Bug description
+        ...
+
+        ### Expected behavior
+        ...
+
+        ### Steps to reproduce
+        1. ...
+        2. ...
+        3. ...
+
+        ### Additional context
+        Add any other context about the problem here.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    label: Version
+    description: If you know the version of PyCeas where the bug occurred, please select it from the list.
+    options:
+      - 0.1.0
+    default: 0
+    validations:
+      required: false
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Which aspect(s) of the project is this bug related to?
+      description: Select all that apply.
+      multiple: true
+      options:
+        - label: Assets (e.g. images, sounds)
+          value: type:assets
+        - label: Audio (e.g. music, sound effects)
+          value: area:audio
+        - label: Gameplay (e.g. player movement, enemy AI)
+          value: area:gameplay
+        - label: Tools (e.g. developer tools, build scripts)
+          value: area:tools
+        - label: Visuals (e.g. sprites, animations, UI)
+          value: area:visuals
+        - label: Animations (e.g. character animations, transitions)
+          value: game:animations
+        - label: Mechanics (e.g. game rules, physics)
+          value: game:mechanics
+        - label: UI (e.g. menus, HUD)
+          value: game:UI
+    validations:
+      required: true
+
+  
+  - type: dropdown
+    id: impact_level
+    label: impact:level
+    description: How does this issue affect the project?
+    options:
+      - label: Low (e.g. typo, minor error)
+        value: impact:low
+      - label: Medium (causes unexpected behavior, but doesn't break the game)
+        value: impact:medium
+      - label: High (blocks functionality or causes a crash)
+        value: impact:high
+      - label: Critical (game-breaking bug or security vulnerability.)
+        value: impact:critical
+    validations:
+      required: true
+  
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: addional:screenshots
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: |
+        You can drag & drop or paste images directly here when submitting the form.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs and error messages
+      description: Please copy and past any relevant logs or error messages here. This will be automatically formatted as code.
+      render: shell
+  
+  - type: textarea
+    id: visual_proof
+    attributes:
+      label: Visual proof
+      description: If possible, create a short GIF or video showing the bug in action.
+
+    **Helpful Tool:** You can use [LICEcap](https://www.cockos.com/licecap/) (free, available for Windows and macOS) to record your screen and capture the issue.  
+    **Linux Alternative:** [Peek](https://github.com/phw/peek) or [Byzanz](https://github.com/GNOME/byzanz) are good options for Linux users.
