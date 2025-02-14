@@ -21,9 +21,9 @@ Provide additional context or background for this user story.
 ## Acceptance Criteria
 <!-- Use checkboxes to define what needs to be true for the user story to be considered complete. -->
 These are the conditions that must be met for this user story to be considered complete:
-- [ ] [Criterion 1]
-- [ ] [Criterion 2]
-- [ ] [Criterion 3]
+- [ ] Criterion 1
+- [ ] Criterion 2
+- [ ] Criterion 3
 
 ---
 
@@ -32,15 +32,15 @@ Each task represents an actionable step. Tasks can be converted into separate is
 
 ### Actionable Tasks
 <!-- Define the steps or tasks needed to implement the user story. -->
-- [ ] **Task 1: [Brief description]**
+- [ ] Task 1: Brief description
   - **Details**: 
   - **Files/Modules Affected**: 
   - **Related Resources**:
-- [ ] **Task 2: [Brief description]**
+- [ ] Task 2: Brief description
   - **Details**: [Optional: Additional context or requirements for this task.]
   - **Files/Modules Affected**: 
   - **Related Resources**: 
-- [ ] **Task 3: [Brief description]**
+- [ ] Task 3: Brief description
   - **Details**: 
   - **Files/Modules Affected**: 
   - **Related Resources**: 
