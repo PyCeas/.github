@@ -2,7 +2,7 @@
 
 ## 📝 Instructions
 Before you add a summary to your pull request, click on the `Preview` button in GitHub to see how your selected template will appear:
-![Preview button](Preview_button.png)
+![Preview button](images/Preview_button.png)
 
 Please choose the appropriate template based on the nature of your changes. Use one of the following templates:
 
