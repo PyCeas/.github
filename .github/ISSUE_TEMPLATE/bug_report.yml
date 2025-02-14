@@ -14,10 +14,10 @@ body:
   - type: textarea
     id: bug-description
     attributes:
-      label: "bug:desc"
+      label: "Bug Description"
       description: |
         A clear and concise description of what the bug is.
-      value: |
+      placeholder: |
         ### Bug description
         ...
 
@@ -36,11 +36,13 @@ body:
 
   - type: dropdown
     id: version
-    label: Version
-    description: If you know the version of PyCeas where the bug occurred, please select it from the list.
-    options:
-      - 0.1.0
-    default: 0
+    attributes:
+      label: "Version"
+      description: If you know the version of PyCeas where the bug occurred, please select it from the list.
+      options:
+        - label: "0.1.0"
+          value: "0.1.0"
+      default: "0.1.0"
     validations:
       required: false
 
@@ -72,24 +74,25 @@ body:
   
   - type: dropdown
     id: impact_level
-    label: "impact:level"
-    description: How does this issue affect the project?
-    options:
-      - label: "Low (e.g. typo, minor error)"
-        value: "impact:low"
-      - label: "Medium (causes unexpected behavior, but doesn't break the game)"
-        value: "impact:medium"
-      - label: "High (blocks functionality or causes a crash)"
-        value: "impact:high"
-      - label: "Critical (game-breaking bug or security vulnerability.)"
-        value: "impact:critical"
+    attributes:
+      label: "Impact Level"
+      description: How does this issue affect the project?
+      options:
+        - label: "Low (e.g. typo, minor error)"
+          value: "impact:low"
+        - label: "Medium (causes unexpected behavior, but doesn't break the game)"
+          value: "impact:medium"
+        - label: "High (blocks functionality or causes a crash)"
+          value: "impact:high"
+        - label: "Critical (game-breaking bug or security vulnerability)"
+          value: "impact:critical"
     validations:
       required: true
   
   - type: textarea
     id: screenshots
     attributes:
-      label: "addional:screenshots"
+      label: "Additional Screenshots"
       description: If applicable, add screenshots to help explain your problem.
       placeholder: |
         You can drag & drop or paste images directly here when submitting the form.
@@ -97,14 +100,14 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: "Relevant logs and error messages"
+      label: "Relevant Logs and Error Messages"
       description: Please copy and paste any relevant logs or error messages here. This will be automatically formatted as code.
       render: shell
   
   - type: textarea
     id: visual_proof
     attributes:
-      label: "Visual proof"
+      label: "Visual Proof"
       description: |
         If possible, create a short GIF or video showing the bug in action.
 
