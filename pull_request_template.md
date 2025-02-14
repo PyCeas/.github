@@ -1,6 +1,9 @@
 # Pull Request Template
 
 ## 📝 Instructions
+Before you add a summary to your pull request, click on the `Preview` button in GitHub to see how your selected template will appear:
+![Preview button](Preview_button.png)
+
 Please choose the appropriate template based on the nature of your changes. Use one of the following templates:
 
 - **[Code Changes Template](https://github.com/PyCeas/Pyceas/compare/main?expand=1&template=code_pr_template.md)**
@@ -28,4 +31,4 @@ If you are not sure which template to choose, refer to the descriptions below:
 ---
 
 ## 🔗 Related Links
-For more information, check the [Contributing Guidelines](/CONTRIBUTING.md) for details on submitting pull requests.
+For more information, check the [Contributing Guidelines](https://github.com/PyCeas/Pyceas/blob/main/CONTRIBUTING.md) for details on submitting pull requests.
