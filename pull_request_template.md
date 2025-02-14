@@ -1,6 +1,9 @@
 # Pull Request Template
 
 ## 📝 Instructions
+Before you add a summary to your pull request, click on the `Preview` button in GitHub to see how your selected template will appear:
+![Preview button](Preview_button.png)
+
 Please choose the appropriate template based on the nature of your changes. Use one of the following templates:
 
 - **[Code Changes Template](https://github.com/PyCeas/Pyceas/compare/main?expand=1&template=code_pr_template.md)**
@@ -9,8 +12,9 @@ Please choose the appropriate template based on the nature of your changes. Use 
 - **[Asset Changes](https://github.com/PyCeas/Pyceas/compare/main?expand=1&template=asset_pr_template.md)**
 - **[Audio Changes](https://github.com/PyCeas/Pyceas/compare/main?expand=1&template=audio_pr_template.md)**
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > When creating a pull request, make sure the base branch is set to `main`. If you are working from a different branch, you can update the target branch > in the pull request interface.
+> 
 
 
 ---
