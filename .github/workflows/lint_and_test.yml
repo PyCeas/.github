@@ -41,11 +41,11 @@ jobs:
         fi
       
     - name: Check for Python files
-      run: |
-        if ! git Is-files '*py' | grep -q '.'; then
-          echo "No Python files found. Exiting."
-          exit 0
-        fi
+    run: |
+      if ! git ls-files '*.py' | grep -q '.'; then
+        echo "No Python files found. Exiting."
+        exit 0
+      fi
     - name: Run ruff
       run: ruff check .
 
