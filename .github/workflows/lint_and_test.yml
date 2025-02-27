@@ -10,6 +10,7 @@ on:
       requirements_path:
         required: false
         type: string
+        default: 'requirements.txt' # Default path to requirements
     secrets:
       repo_token:
         required: true
@@ -28,14 +29,17 @@ jobs:
       with:
         python-version: ${{ inputs.python-version }}
 
+    - name: Debug Python Version
+      run: python --version
+
     - name: Install dependencies (if requirements.txt exists)
       run: |
-        if [ - f requirements.txt ]; then
-          echo "requirements.txt found. Installing dependencies."
+        if [ -f ${{ inputs.requirements_path }} ]; then
+          echo "${{ inputs.requirements_path }} found. Installing dependencies."
           python -m pip install --upgrade pip
           pip install -r requirements.txt
         else
-          echo "No requirements.txt found. Installing ruff and mypy."
+          echo "No ${{ inputs.requirements_path }} found. Installing ruff and mypy."
           python -m pip install --upgrade pip
           pip install ruff mypy
         fi
