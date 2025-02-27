@@ -1,11 +1,19 @@
 name: Test (lint and typehints)
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types: [opened, synchronize, reopened]
+  workflow_call:
+    inputs:
+      python-version:
+        required: false
+        type: string
+        default: '3.12'   # Default Python version
+      requirements_path:
+        required: false
+        type: string
+    secrets:
+      repo_token:
+        required: true
+
 
 jobs:
   lint_and_typehints:
