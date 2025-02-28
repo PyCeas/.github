@@ -10,11 +10,10 @@ on:
       requirements_path:
         required: false
         type: string
-        default: 'requirements.txt' # Default path to requirements
+        default: 'requirements_dev.txt' # Default path to requirements
     secrets:
       repo_token:
         required: true
-
 
 jobs:
   lint_and_typehints:
@@ -32,7 +31,7 @@ jobs:
     - name: Debug Python Version
       run: python --version
 
-    - name: Install dependencies (if requirements.txt exists)
+    - name: Install dependencies (if requirements_dev.txt exists)
       run: |
         if [ -f ${{ inputs.requirements_path }} ]; then
           echo "${{ inputs.requirements_path }} found. Installing dependencies."
@@ -44,15 +43,14 @@ jobs:
           pip install ruff mypy
         fi
 
-    - name: Run ruff
+    - name: Run linters and type checkers
       run: |
-        ruff check $(git-ls '*.py')
-
-    - name: Run mypy
-      run: |
-        mypy main.py
-
-
-
-
-    
+        files=$(git ls-files '*.py')
+        if [ -n "$files" ]; then
+          echo "Python files detected: Running ruff and mypy."
+          ruff check $files
+          mypy $files
+        else
+          echo "No Python files found. Skipping checks."
+          exit 0
+        fi
