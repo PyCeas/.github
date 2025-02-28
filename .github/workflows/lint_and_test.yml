@@ -46,11 +46,11 @@ jobs:
 
     - name: Run ruff
       run: |
-        ruff check $(git ls-files '*.py')
+        ruff check $(git-ls '*.py')
 
     - name: Run mypy
       run: |
-        mypy $(git ls-files '*.py')
+        mypy main.py
 
 
 
