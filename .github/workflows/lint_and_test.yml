@@ -10,7 +10,7 @@ on:
       requirements_path:
         required: false
         type: string
-        default: 'requirements_dev.txt' # Default path to requirements
+        default: 'requirements.txt' # Default path to requirements
     secrets:
       repo_token:
         required: true
