@@ -28,29 +28,22 @@ jobs:
       with:
         python-version: ${{ inputs.python-version }}
 
-    - name: Debug Python Version
+    - name: Debug Python version
       run: python --version
 
-    - name: Install dependencies (if requirements_dev.txt exists)
+    - name: Install dependencies
       run: |
-        if [ -f ${{ inputs.requirements_path }} ]; then
-          echo "${{ inputs.requirements_path }} found. Installing dependencies."
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-        else
-          echo "No ${{ inputs.requirements_path }} found. Installing ruff and mypy."
-          python -m pip install --upgrade pip
-          pip install ruff mypy
-        fi
+          pip install -r ${{ inputs.requirements_path }}
 
-    - name: Run linters and type checkers
+    - name: Install linters
       run: |
-        files=$(git ls-files '*.py')
-        if [ -n "$files" ]; then
-          echo "Python files detected: Running ruff and mypy."
-          ruff check $files
-          mypy $files
-        else
-          echo "No Python files found. Skipping checks."
-          exit 0
-        fi
+        python -m pip install ruff mypy
+
+    - name: Run ruff for linting
+      run: |
+        ruff check $(git ls-files '*.py')
+
+    - name: Run mypy for type checking
+      run: |
+        mypy main.py
