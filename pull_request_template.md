@@ -1,7 +1,7 @@
 # Pull Request Template
 
 ## Type of Pull Request
-
+Only check one box per pull request.
 - [ ] 🛠️ Code - Changes to the codebase.
 - [ ] 🔄 Revert - Reverts a previously merged commit or PR.
 - [ ] 📄 Documentation - Updates to documentation files.
