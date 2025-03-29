@@ -1,43 +1,40 @@
 # Pull Request Template
 
-## 📝 Instructions
-Before you add a summary to your pull request, click on the `Preview` button in GitHub to see how your selected template will appear:
+## Type of Pull Request
 
-![Preview button](https://raw.githubusercontent.com/PyCeas/.github/main/images/Preview_button.png)
+- [ ] 🛠️ Code - Changes to the codebase.
+- [ ] 🔄 Revert - Reverts a previously merged commit or PR.
+- [ ] 📄 Documentation - Updates to documentation files.
+- [ ] 🎵 Audio - Changes to audio files.
+- [ ] 🎨 Asset - Updates to design or visual assets.
 
-Please choose the appropriate template based on the nature of your changes. Use one of the following templates:
+## Summary
 
-- [Code Changes Template](https://github.com/PyCeas/.github/blob/main/.github/PULL_REQUEST_TEMPLATE/code_pr_template.md)
-- [Documentation Changes](https://github.com/PyCeas/.github/blob/main/.github/PULL_REQUEST_TEMPLATE/docs_pr_template.md)
-- [Revert Previous Changes](https://github.com/PyCeas/.github/blob/main/.github/PULL_REQUEST_TEMPLATE/revert_pr_template.md)
-- [Asset Changes](https://github.com/PyCeas/.github/blob/main/.github/PULL_REQUEST_TEMPLATE/asset_pr_template.md)
-- [Audio Changes](https://github.com/PyCeas/.github/blob/main/.github/PULL_REQUEST_TEMPLATE/audio_pr_template.md)
+<!-- 
+INSTRUCTIONS:
+- Briefly describe the purpose of this pull request. 
+-->
 
-Once you've copied the content, replace this message with your PR details.
-
-> [!IMPORTANT]
-> When creating a pull request, make sure the base branch is set to `main`. If you are working from a different branch, you can update the target branch > in the pull request interface.
-> 
+This PR <!-- adds|modifies|updates|fixes|reverts --> ... <!-- Briefly explain what the PR changes. -->
 
 
----
+## Related Issues
+<!-- 
+INSTRUCTIONS:
+- Mention related issue numbers here.
+- Example: "Fixes #123, Closes #456."
+-->
 
-### **General Information**
-
-If you are not sure which template to choose, refer to the descriptions below:
-
-- `code_pr_template.md`: Use for changes to gameplay, mechanics, bug fixes or performance improvements.
-- `docs_pr_template.md`: Use for changes to markdown files, guides, or other text-based documentation.
-- `revert_pr_template.md`: Use when reverting changes from a previously merged pull request.
-- `asset_pr_template.md`: Use for updates to visual assets such as sprites, textures, or models.
-- `audio_pr_template.md`: Use for updates to sound effects, music, or other audio files.
-
-> [!NOTE]
-> All templates for pull requests and issues are stored in the [.github repository](https://github.com/PyCeas/.github). Visit this repository if you're unsure about which template to use or need more details.
-
+This PR <!-- fixes|closes|addresses|reverts --> issue(s) <!-- (e.g., Fixes #123, Closes #456) -->
 
 ---
 
-## 🔗 Related Links
-- [Contributing Guidelines](https://github.com/PyCeas/Pyceas/blob/main/CONTRIBUTING.md)
-- [Template Repository](https://github.com/PyCeas/.github)
+## ✅ Checklist:
+
+- [ ] Tested the changes locally.
+- [ ] Verified that no breaking changes are introduced.
+- [ ] Updated documentation (if applicable).
+
+
+## 🏷️ Labels:
+`type: ...`, `area: ...`, `game-...`, ... <!-- Fill and expand on this line as needed. See https://github.com/PyCeas/Pyceas/wiki/Guide-to-using-labels for more information. -->
